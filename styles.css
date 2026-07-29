@@ -717,9 +717,9 @@ a:focus-visible {
   margin: 0.35rem 0 0;
   color: var(--terracotta);
   font-family: var(--sans);
-  font-size: 0.72rem;
+  font-size: 0.88rem;
   font-weight: 600;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.015em;
 }
 
 .experience-entry-heading > span {
