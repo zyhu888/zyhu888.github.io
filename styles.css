@@ -1,9 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap");
 :root {
   --paper: #f2ece2;
   --paper-deep: #e7dccd;
   --ink: #302720;
   --muted: #75685e;
   --terracotta: #a35338;
+  --link-blue: #2e6387;
+  --link-blue-dark: #174666;
   --rule: #cdbdad;
   --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino,
     Georgia, serif;
@@ -159,13 +162,23 @@ a:focus-visible {
 }
 
 .introduction > p a {
-  color: var(--terracotta);
-  border-bottom: 1px solid color-mix(in srgb, var(--terracotta) 45%, transparent);
-  transition: border-color 180ms ease;
+  color: var(--link-blue);
+  text-decoration-color: color-mix(
+    in srgb,
+    var(--link-blue) 48%,
+    transparent
+  );
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition:
+    color 180ms ease,
+    text-decoration-color 180ms ease;
 }
 
 .introduction > p a:hover {
-  border-color: var(--terracotta);
+  color: var(--link-blue-dark);
+  text-decoration-color: currentColor;
 }
 
 .education-compact {
@@ -228,9 +241,29 @@ a:focus-visible {
   line-height: 1.35;
 }
 
+.education-copy h3 a {
+  color: var(--link-blue);
+  text-decoration-color: color-mix(
+    in srgb,
+    var(--link-blue) 42%,
+    transparent
+  );
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition:
+    color 180ms ease,
+    text-decoration-color 180ms ease;
+}
+
+.education-copy h3 a:hover {
+  color: var(--link-blue-dark);
+  text-decoration-color: currentColor;
+}
+
 .education-copy h3 a span {
   display: inline-block;
-  color: var(--terracotta);
+  color: inherit;
   font-family: var(--sans);
   font-size: 0.8em;
   transition: transform 180ms ease;
@@ -271,13 +304,23 @@ a:focus-visible {
 }
 
 .education-advisors a {
-  color: var(--terracotta);
-  border-bottom: 1px solid color-mix(in srgb, var(--terracotta) 42%, transparent);
-  transition: border-color 180ms ease;
+  color: var(--link-blue);
+  text-decoration-color: color-mix(
+    in srgb,
+    var(--link-blue) 42%,
+    transparent
+  );
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition:
+    color 180ms ease,
+    text-decoration-color 180ms ease;
 }
 
 .education-advisors a:hover {
-  border-color: var(--terracotta);
+  color: var(--link-blue-dark);
+  text-decoration-color: currentColor;
 }
 
 .profile-card {
@@ -339,7 +382,8 @@ a:focus-visible {
   text-align: left;
 }
 
-.profile-links a {
+.profile-links > a,
+.profile-links > .profile-email-button {
   display: grid;
   grid-template-columns: 34px 1fr auto;
   gap: 0.72rem;
@@ -353,11 +397,19 @@ a:focus-visible {
   font-weight: 650;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  font-family: inherit;
+  text-align: left;
   transition:
     color 180ms ease,
     border-color 180ms ease,
     background 180ms ease,
     transform 180ms ease;
+}
+
+.profile-email-button {
+  width: 100%;
+  background: transparent;
+  cursor: pointer;
 }
 
 .profile-link-icon {
@@ -377,16 +429,182 @@ a:focus-visible {
   transition: transform 180ms ease;
 }
 
-.profile-links a:hover {
+.profile-links > a:hover,
+.profile-links > .profile-email-button:hover {
   border-color: var(--terracotta);
   background: var(--terracotta);
   color: var(--paper);
   transform: translateY(-2px);
 }
 
-.profile-links a:hover .profile-link-arrow {
+.profile-links > a:hover .profile-link-arrow,
+.profile-links > .profile-email-button:hover .profile-link-arrow {
   color: var(--paper);
   transform: translate(2px, -2px);
+}
+
+.profile-email-button:focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 5px;
+}
+
+.contact-dialog {
+  width: min(620px, calc(100vw - 2rem));
+  max-height: calc(100vh - 2rem);
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid var(--rule);
+  border-radius: 24px;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 28px 80px rgb(48 39 32 / 28%);
+}
+
+.contact-dialog::backdrop {
+  background: rgb(48 39 32 / 48%);
+  backdrop-filter: blur(4px);
+}
+
+.contact-dialog-shell {
+  position: relative;
+  padding: clamp(2rem, 6vw, 3.5rem);
+}
+
+.contact-dialog-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 1.75rem;
+  transition:
+    color 180ms ease,
+    background 180ms ease;
+}
+
+.contact-dialog-close:hover {
+  background: color-mix(in srgb, var(--rule) 30%, transparent);
+  color: var(--ink);
+}
+
+.contact-dialog-close:focus-visible,
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible,
+.contact-submit:focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 3px;
+}
+
+.contact-dialog h2 {
+  margin: 0;
+  padding-right: 2.5rem;
+  font-family: var(--serif);
+  font-size: clamp(2.1rem, 6vw, 3rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+}
+
+.contact-dialog-intro {
+  margin: 0.65rem 0 2rem;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.15rem;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.contact-form label > span {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  background: color-mix(in srgb, white 55%, var(--paper));
+  color: var(--ink);
+  font: inherit;
+  padding: 0.8rem 1rem;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: color-mix(in srgb, var(--muted) 72%, transparent);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--terracotta);
+  background: color-mix(in srgb, white 70%, var(--paper));
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-submit {
+  min-height: 52px;
+  margin-top: 0.25rem;
+  padding: 0.75rem 1.2rem;
+  border: 1px solid var(--terracotta);
+  border-radius: 14px;
+  background: var(--terracotta);
+  color: var(--paper);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition:
+    background 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.contact-submit:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  transform: translateY(-1px);
+}
+
+.contact-form-note {
+  margin: -0.2rem 0 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.contact-form-note a {
+  color: var(--link-blue);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
 
 .experience-page {
@@ -463,15 +681,6 @@ a:focus-visible {
   line-height: 1;
 }
 
-.experience-panel-copy > p {
-  max-width: 660px;
-  margin: 1.4rem 0 0;
-  color: var(--muted);
-  font-family: var(--serif);
-  font-size: clamp(1rem, 1.5vw, 1.18rem);
-  line-height: 1.7;
-}
-
 .experience-status {
   margin-top: auto;
   padding-top: 2rem;
@@ -508,6 +717,7 @@ a:focus-visible {
 .experience-entry-heading p {
   margin: 0.35rem 0 0;
   color: var(--terracotta);
+  font-family: "DM Sans", var(--sans);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.09em;
@@ -547,6 +757,59 @@ a:focus-visible {
   left: 0;
   color: var(--terracotta);
   content: "—";
+}
+
+.experience-supervisors {
+  display: block;
+  margin-top: 0.3rem;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.76rem;
+  font-style: italic;
+  line-height: 1.55;
+}
+
+.experience-supervisors a {
+  color: var(--link-blue);
+  text-decoration-color: color-mix(
+    in srgb,
+    var(--link-blue) 42%,
+    transparent
+  );
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition:
+    color 180ms ease,
+    text-decoration-color 180ms ease;
+}
+
+.experience-supervisors a:hover,
+.experience-supervisors a:focus-visible {
+  color: var(--link-blue-dark);
+  text-decoration-color: currentColor;
+}
+
+.experience-inline-link {
+  color: var(--link-blue);
+  font-weight: 600;
+  text-decoration-color: color-mix(
+    in srgb,
+    var(--link-blue) 46%,
+    transparent
+  );
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition:
+    color 180ms ease,
+    text-decoration-color 180ms ease;
+}
+
+.experience-inline-link:hover,
+.experience-inline-link:focus-visible {
+  color: var(--link-blue-dark);
+  text-decoration-color: currentColor;
 }
 
 .publications-page {
@@ -593,13 +856,23 @@ a:focus-visible {
 }
 
 .publications-intro > p a {
-  color: var(--terracotta);
-  border-bottom: 1px solid color-mix(in srgb, var(--terracotta) 45%, transparent);
-  transition: border-color 180ms ease;
+  color: var(--link-blue);
+  text-decoration-color: color-mix(
+    in srgb,
+    var(--link-blue) 45%,
+    transparent
+  );
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition:
+    color 180ms ease,
+    text-decoration-color 180ms ease;
 }
 
 .publications-intro > p a:hover {
-  border-color: var(--terracotta);
+  color: var(--link-blue-dark);
+  text-decoration-color: currentColor;
 }
 
 .publication-section {
@@ -668,14 +941,24 @@ a:focus-visible {
 }
 
 .publication-title {
-  color: var(--terracotta);
+  color: var(--link-blue);
   font-weight: 600;
-  border-bottom: 1px solid color-mix(in srgb, var(--terracotta) 35%, transparent);
-  transition: border-color 180ms ease;
+  text-decoration-color: color-mix(
+    in srgb,
+    var(--link-blue) 38%,
+    transparent
+  );
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition:
+    color 180ms ease,
+    text-decoration-color 180ms ease;
 }
 
 .publication-title:hover {
-  border-color: var(--terracotta);
+  color: var(--link-blue-dark);
+  text-decoration-color: currentColor;
 }
 
 .publication-list strong {

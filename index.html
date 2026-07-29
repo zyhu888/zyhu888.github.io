@@ -11,11 +11,12 @@
   <meta property="og:image" content="https://zyhu888.github.io/og.png">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
+  <script src="/contact.js" defer></script>
   <title>Zeyu Hu</title>
 </head>
 <body>
   <main id="home">
-    
+
   <header class="site-header">
     <a class="wordmark" href="/" aria-label="Zeyu Hu, home">ZH</a>
     <nav class="primary-nav" aria-label="Primary navigation">
@@ -29,12 +30,12 @@
       CV <span aria-hidden="true">↗</span>
     </a>
   </header>
-    
+
   <section class="home-layout page-shell" aria-labelledby="hello-title">
     <div class="introduction">
       <h1 id="hello-title">Hello!</h1>
       <p class="welcome-line">I’m Zeyu Hu. Thank you for stopping by my website!</p>
-      <p class="bio">I’m a fourth-year Ph.D. student in Statistics at the University of Connecticut. My research interests include complex network analysis, Bayesian computation, Markov chain Monte Carlo (MCMC), and statistical methods for epidemiology. I’m particularly interested in developing statistically principled and computationally efficient methods for complex, dependent, and high-dimensional data, with applications to biomedical data, epidemiology, public health, and pediatric research.</p>
+      <p class="bio">I’m a fourth-year Ph.D. student in Statistics at the University of Connecticut. My research focuses on statistical methods for complex networks and high-dimensional data, particularly covariate-informed clustering, Bayesian modeling, and MCMC computation, with applications to functional brain networks and genomics. My applied work spans epidemiology and public health, including spatiotemporal and longitudinal studies of infectious disease and aging cohorts, as well as Bayesian design and analysis for pediatric clinical trials.</p>
 
       <section class="education-compact" aria-labelledby="education-title">
         <h2 id="education-title">Education</h2>
@@ -70,6 +71,7 @@
       <div class="portrait-frame"><img src="/zeyu-hu.jpg" alt="Portrait of Zeyu Hu" width="400" height="400"></div>
       <h2>Zeyu Hu</h2>
       <div class="profile-links" aria-label="Social and contact links">
+
       <a href="https://www.linkedin.com/in/zeyu-hu-6a5524234" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn">
         <span class="profile-link-icon" aria-hidden="true"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg></span>
         <span>LinkedIn</span>
@@ -85,14 +87,29 @@
         <span>Google Scholar</span>
         <span class="profile-link-arrow" aria-hidden="true">↗</span>
       </a>
-      <a href="mailto:zeyu.hu@uconn.edu" aria-label="Email" title="Email">
-        <span class="profile-link-icon" aria-hidden="true"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></span>
-        <span>Email</span>
-        <span class="profile-link-arrow" aria-hidden="true">↗</span>
-      </a></div>
+        <button class="profile-email-button" type="button" aria-haspopup="dialog" data-contact-open>
+          <span class="profile-link-icon" aria-hidden="true"><svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"></path></svg></span>
+          <span>Email</span>
+          <span class="profile-link-arrow" aria-hidden="true">↗</span>
+        </button>
+        <dialog class="contact-dialog" aria-labelledby="contact-dialog-title" data-contact-dialog>
+          <div class="contact-dialog-shell">
+            <button class="contact-dialog-close" type="button" aria-label="Close contact form" data-contact-close>×</button>
+            <h2 id="contact-dialog-title">Get in touch</h2>
+            <p class="contact-dialog-intro">Send me a message and I’ll get back to you.</p>
+            <form class="contact-form" data-contact-form>
+              <label><span>Name</span><input type="text" name="name" autocomplete="name" placeholder="Your name" required></label>
+              <label><span>Email</span><input type="email" name="email" autocomplete="email" placeholder="your@email.com" required></label>
+              <label><span>Message</span><textarea name="message" placeholder="What’s on your mind?" required></textarea></label>
+              <button class="contact-submit" type="submit">Send message <span aria-hidden="true">↗</span></button>
+              <p class="contact-form-note">This opens a ready-to-send Gmail draft addressed to me. Prefer another email app? <a href="mailto:zeyu.hu8888@gmail.com">zeyu.hu8888@gmail.com</a></p>
+            </form>
+          </div>
+        </dialog>
+      </div>
     </aside>
   </section>
-    
+
   <footer class="site-footer page-shell">
     <p>© 2026 Zeyu Hu</p>
     <p>Complex networks · Bayesian computation · Statistical applications</p>

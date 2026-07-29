@@ -11,11 +11,12 @@
   <meta property="og:image" content="https://zyhu888.github.io/og.png">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
+  <script src="/contact.js" defer></script>
   <title>Experience | Zeyu Hu</title>
 </head>
 <body>
   <main>
-    
+
   <header class="site-header">
     <a class="wordmark" href="/" aria-label="Zeyu Hu, home">ZH</a>
     <nav class="primary-nav" aria-label="Primary navigation">
@@ -29,77 +30,135 @@
       CV <span aria-hidden="true">↗</span>
     </a>
   </header>
-    
+
   <div class="experience-page page-shell">
     <header class="experience-intro">
       <p class="section-kicker">Background</p>
       <h1>Experience</h1>
       <p>A structured overview of my professional, research, and leadership experience.</p>
     </header>
-
     <div class="experience-sections">
-      <section class="experience-panel" id="industry" aria-labelledby="industry-title">
-        <div class="experience-panel-copy">
-          <h2 id="industry-title">Industry Experience</h2>
-          <p>Professional roles, internships, and applied work will be presented here.</p>
-          <span class="experience-status">Details to follow</span>
-        </div>
-      </section>
 
-      <section class="experience-panel" id="research" aria-labelledby="research-title">
-        <div class="experience-panel-copy">
-          <h2 id="research-title">Research Experience</h2>
-          <p>Research appointments, collaborations, and selected projects will be presented here.</p>
-          <article class="experience-entry">
-            <div class="experience-entry-heading">
-              <div>
-                <h3>Research Assistant, Department of Statistics</h3>
-                <p>Virginia Tech</p>
-              </div>
-              <span>2022.06 — 2022.09</span>
-            </div>
-            <ul>
-              <li>Developed an online R demonstration of generalized additive models. Implemented examples of causal-inference methods, including inverse-probability weighting, propensity-score methods, marginal structural models, and g-estimation. Completed a literature review on safety verification for autonomous driving systems (ADS).</li>
-            </ul>
-          </article>
-        </div>
-      </section>
+            <section class="experience-panel" id="industry" aria-labelledby="industry-title">
+              <div class="experience-panel-copy">
+                <h2 id="industry-title">Industry Experience</h2>
 
-      <section class="experience-panel" id="leadership" aria-labelledby="leadership-title">
-        <div class="experience-panel-copy">
-          <h2 id="leadership-title">Leadership &amp; Service</h2>
-          <p>Student leadership, campus involvement, and service activities will be presented here.</p>
-          <article class="experience-entry">
-            <div class="experience-entry-heading">
-              <div>
-                <h3>Deputy Director, Human Resources Center</h3>
-                <p>Student Union of SYSU</p>
+  <article class="experience-entry">
+    <div class="experience-entry-heading">
+      <div><h3>Intern — Biostatistics</h3><p>Insmed Incorporated</p></div>
+      <span>2026.05 — 2026.08</span>
+    </div>
+    <ul>
+      <li><span>Developed and validated Bayesian workflows for pediatric clinical trials using robust mixture priors to incorporate adult evidence. Built R Shiny applications for simulation and real-data analysis of count and time-to-event endpoints, evaluating operating characteristics, effective sample size, and sensitivity to information borrowing.</span></li>
+    </ul>
+  </article>
+  <article class="experience-entry">
+    <div class="experience-entry-heading">
+      <div><h3>Intern — Big Data Engineering</h3><p>Agricultural Bank of China</p></div>
+      <span>2019.06 — 2019.08</span>
+    </div>
+    <ul>
+      <li><span>Developed a data classification and search platform, using k-means and spectral clustering to consolidate related tables, improve information retrieval, and reduce storage redundancy.</span></li>
+    </ul>
+  </article>
+  <article class="experience-entry">
+    <div class="experience-entry-heading">
+      <div><h3>Intern — Business Analytics</h3><p>Shanxi Financial Assets Exchange Co., Ltd.</p></div>
+      <span>2018.08 — 2018.09</span>
+    </div>
+    <ul>
+      <li><span>Analyzed customer transaction data and evaluated new financial products, providing recommendations to improve product design and customer adoption.</span></li>
+    </ul>
+  </article>
+  <article class="experience-entry">
+    <div class="experience-entry-heading">
+      <div><h3>Intern — Technology Innovation Department</h3><p>China Telecom, Taiyuan Branch</p></div>
+      <span>2017.01 — 2017.02</span>
+    </div>
+    <ul>
+      <li><span>Processed backend data for BESTPAY, then China’s third-largest mobile payment platform, in Shanxi Province and supported business approvals, annual-report reviews, and merchant adoption initiatives.</span></li>
+    </ul>
+  </article>
               </div>
-              <span>2017.09 — 2018.11</span>
-            </div>
-            <ul>
-              <li>Helped launch “YanWu (語),” a WeChat platform for student dialogue that reached more than 2,000 readers, and established cross-departmental collaboration and member evaluation systems.</li>
-              <li>Designed “The Young,” a training program attended by more than 700 members, and built a leadership pipeline for future Student Union leaders.</li>
-            </ul>
-          </article>
-          <article class="experience-entry">
-            <div class="experience-entry-heading">
-              <div>
-                <h3>Member, Secretariat Department</h3>
-                <p>Student Union of SYSU</p>
+            </section>
+            <section class="experience-panel" id="research" aria-labelledby="research-title">
+              <div class="experience-panel-copy">
+                <h2 id="research-title">Research Experience</h2>
+
+  <article class="experience-entry">
+    <div class="experience-entry-heading">
+      <div><h3>Ph.D. Research, Department of Statistics</h3><p>University of Connecticut</p></div>
+      <span>2023.09 — Present</span>
+    </div>
+    <ul>
+      <li><span>Develop statistical methods for complex networks and high-dimensional data, focusing on covariate-informed clustering, Bayesian modeling, and MCMC computation, with applications to HIV/AIDS networks, functional brain networks, and network-guided gene selection. This work includes the <a class="experience-inline-link" href="https://github.com/zyhu888/c4" target="_blank" rel="noreferrer">C4</a> and <a class="experience-inline-link" href="https://github.com/zyhu888/RCDC" target="_blank" rel="noreferrer">RCDC</a> methods and their accompanying R packages.</span><span class="experience-supervisors">Supervised by <a href="https://statistics.uconn.edu/person/jun-yan/" target="_blank" rel="noreferrer">Dr. Jun Yan</a>, <a href="https://statistics.uconn.edu/person/wenrui-li/" target="_blank" rel="noreferrer">Dr. Wenrui Li</a> and <a href="https://www.vumc.org/biostatistics/person/panpan-zhang" target="_blank" rel="noreferrer">Dr. Panpan Zhang</a>.</span></li>
+    </ul>
+  </article>
+  <article class="experience-entry">
+    <div class="experience-entry-heading">
+      <div><h3>Research Assistant, UConn Center on Aging</h3><p>UConn Health</p></div>
+      <span>2026.01 — 2026.06</span>
+    </div>
+    <ul>
+      <li><span>Modeled longitudinal relationships among appetite loss, inflammatory biomarkers, and incident physical disability in community-dwelling older adults using mixed-effects and survival methods.</span><span class="experience-supervisors">Supervised by <a href="https://facultydirectory.uchc.edu/profile?profileId=Soliman-Germine" target="_blank" rel="noreferrer">Dr. Germine Soliman</a>, <a href="https://facultydirectory.uchc.edu/profile?profileId=Barry-Lisa" target="_blank" rel="noreferrer">Dr. Lisa C. Barry</a> and <a href="https://facultydirectory.uchc.edu/profile?profileId=Coman-Emil" target="_blank" rel="noreferrer">Dr. Emil Coman</a>.</span></li><li><span>Modeled longitudinal associations between metabolic syndrome and demographic, behavioral, and clinical factors among women.</span><span class="experience-supervisors">Supervised by <a href="https://facultydirectory.uchc.edu/profile?profileId=Al-Naggar-Iman" target="_blank" rel="noreferrer">Dr. Iman Al-Naggar</a>.</span></li>
+    </ul>
+  </article>
+  <article class="experience-entry">
+    <div class="experience-entry-heading">
+      <div><h3>Research Assistant, Department of Public Health Sciences</h3><p>UConn Health</p></div>
+      <span>2023.10 — 2025.01</span>
+    </div>
+    <ul>
+      <li><span>Conducted statistical modeling and analysis for several independent projects using Korean COVID-19 data, covering mobility and consumption patterns, social-distancing policies, urban connectivity, and long-COVID outcomes. Applied spatiotemporal, time-series, network analysis, and longitudinal methods to study behavioral and health dynamics during and after the pandemic.</span><span class="experience-supervisors">Supervised by <a href="https://health.uconn.edu/public-health-sciences/person/youngji-jo/" target="_blank" rel="noreferrer">Dr. Youngji Jo</a>.</span></li>
+    </ul>
+  </article>
+  <article class="experience-entry">
+    <div class="experience-entry-heading">
+      <div><h3>Research Assistant, Department of Statistics</h3><p>Virginia Tech</p></div>
+      <span>2022.06 — 2022.09</span>
+    </div>
+    <ul>
+      <li><span>Developed an online R demonstration of generalized additive models. Implemented examples of causal-inference methods, including inverse-probability weighting, propensity-score methods, marginal structural models, and g-estimation. Completed a literature review on safety verification for autonomous driving systems (ADS).</span><span class="experience-supervisors">Supervised by <a href="https://www.stat.vt.edu/people/stat-faculty/guo-feng.html" target="_blank" rel="noreferrer">Dr. Feng Guo</a>.</span></li>
+    </ul>
+  </article>
+  <article class="experience-entry">
+    <div class="experience-entry-heading">
+      <div><h3>Research Intern, Chinese Evidence-Based Medicine Center and Cochrane China Center</h3><p>West China Hospital, Sichuan University</p></div>
+      <span>2021.05 — 2021.07</span>
+    </div>
+    <ul>
+      <li><span>Cleaned and structured clinical data using SQL and R, developed rule-based identification of sepsis cases from medication and symptom records, and created visual materials to communicate statistical methods to clinical collaborators.</span><span class="experience-supervisors">Supervised by <a href="https://yjs.cd120.com/contents/546/2520.html" target="_blank" rel="noreferrer">Dr. Xin Sun</a>.</span></li>
+    </ul>
+  </article>
               </div>
-              <span>2016.10 — 2017.06</span>
-            </div>
-            <ul>
-              <li>Co-organized a university-wide New Year’s Eve gala for more than 10,000 attendees with the Arts &amp; Culture Department; oversaw venue approvals and managed over RMB 20,000 (approximately US$3,000) in budgeting, reconciliation, and reimbursements.</li>
-              <li>Collaborated with the Internal Affairs Department to organize more than five team-building and social networking activities for Student Union members, with cumulative attendance in the thousands.</li>
-            </ul>
-          </article>
-        </div>
-      </section>
+            </section>
+            <section class="experience-panel" id="leadership" aria-labelledby="leadership-title">
+              <div class="experience-panel-copy">
+                <h2 id="leadership-title">Leadership & Service</h2>
+
+  <article class="experience-entry">
+    <div class="experience-entry-heading">
+      <div><h3>Deputy Director, Human Resources Center</h3><p>Student Union of SYSU</p></div>
+      <span>2017.09 — 2018.11</span>
+    </div>
+    <ul>
+      <li><span>Helped launch “YanWu (語),” a WeChat platform for student dialogue that reached more than 2,000 readers, and established cross-departmental collaboration and member evaluation systems.</span></li><li><span>Designed “The Young,” a training program attended by more than 700 members, and built a leadership pipeline for future Student Union leaders.</span></li>
+    </ul>
+  </article>
+  <article class="experience-entry">
+    <div class="experience-entry-heading">
+      <div><h3>Member, Secretariat Department</h3><p>Student Union of SYSU</p></div>
+      <span>2016.10 — 2017.06</span>
+    </div>
+    <ul>
+      <li><span>Co-organized a university-wide New Year’s Eve gala for more than 10,000 attendees with the Arts & Culture Department; oversaw venue approvals and managed over RMB 20,000 (approximately US$3,000) in budgeting, reconciliation, and reimbursements.</span></li><li><span>Collaborated with the Internal Affairs Department to organize more than five team-building and social networking activities for Student Union members, with cumulative attendance in the thousands.</span></li>
+    </ul>
+  </article>
+              </div>
+            </section>
     </div>
   </div>
-    
+
   <footer class="site-footer page-shell">
     <p>© 2026 Zeyu Hu</p>
     <p>Complex networks · Bayesian computation · Statistical applications</p>
