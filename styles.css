@@ -9,6 +9,7 @@
   --rule: #cdbdad;
   --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino,
     Georgia, serif;
+  --body-serif: "Times New Roman", Times, serif;
   --sans: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -150,7 +151,7 @@ a:focus-visible {
 
 .introduction > p {
   margin: 1.2rem 0 0;
-  font-family: var(--serif);
+  font-family: var(--body-serif);
   font-size: clamp(1.12rem, 1.6vw, 1.38rem);
   line-height: 1.7;
 }
@@ -289,7 +290,7 @@ a:focus-visible {
 .education-copy .education-advisors {
   margin-top: 0.36rem;
   color: var(--muted);
-  font-family: var(--serif);
+  font-family: var(--body-serif);
   font-size: 0.84rem;
   font-weight: 400;
   letter-spacing: 0;
@@ -644,7 +645,7 @@ a:focus-visible {
 .experience-intro > p:last-child {
   max-width: 620px;
   margin: 0;
-  font-family: var(--serif);
+  font-family: var(--body-serif);
   font-size: clamp(1.08rem, 1.7vw, 1.35rem);
   line-height: 1.65;
 }
@@ -744,7 +745,7 @@ a:focus-visible {
 .experience-entry li {
   position: relative;
   padding-left: 1.35rem;
-  font-family: var(--serif);
+  font-family: var(--body-serif);
   font-size: clamp(0.98rem, 1.35vw, 1.1rem);
   line-height: 1.68;
 }
@@ -848,7 +849,7 @@ a:focus-visible {
 .publications-intro > p:last-child {
   max-width: 700px;
   margin: 0;
-  font-family: var(--serif);
+  font-family: var(--body-serif);
   font-size: clamp(1.08rem, 1.7vw, 1.35rem);
   line-height: 1.65;
 }
@@ -933,7 +934,7 @@ a:focus-visible {
 .publication-list p {
   max-width: 980px;
   margin: 0;
-  font-family: var(--serif);
+  font-family: var(--body-serif);
   font-size: clamp(1.02rem, 1.4vw, 1.16rem);
   line-height: 1.72;
 }
@@ -1005,7 +1006,7 @@ a:focus-visible {
 .software-intro > p:last-child {
   max-width: 620px;
   margin: 0;
-  font-family: var(--serif);
+  font-family: var(--body-serif);
   font-size: clamp(1.08rem, 1.7vw, 1.35rem);
   line-height: 1.65;
 }
@@ -1080,7 +1081,7 @@ a:focus-visible {
 }
 
 .software-row p {
-  font-family: var(--serif);
+  font-family: var(--body-serif);
   font-size: clamp(1rem, 1.5vw, 1.12rem);
 }
 
