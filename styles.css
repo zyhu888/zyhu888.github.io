@@ -995,6 +995,7 @@ a:focus-visible {
   margin: 0;
   font-family: var(--serif);
   font-size: clamp(3.8rem, 8vw, 7rem);
+  font-style: italic;
   font-weight: 400;
   letter-spacing: -0.055em;
   line-height: 0.9;
