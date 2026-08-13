@@ -1017,8 +1017,8 @@ a:focus-visible {
 
 .package-hexagon {
   display: block;
-  width: clamp(245px, 27vw, 330px);
-  filter: saturate(0.96);
+  width: clamp(290px, 32vw, 390px);
+  filter: saturate(1) drop-shadow(0 10px 12px rgb(45 41 36 / 10%));
   transition: filter 200ms ease, transform 220ms ease;
 }
 
