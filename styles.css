@@ -1012,13 +1012,13 @@ a:focus-visible {
 .software-showcase {
   display: grid;
   place-items: center;
-  padding-block: clamp(3.2rem, 7vw, 5.5rem);
+  padding-block: clamp(1.8rem, 3vw, 2.5rem);
 }
 
 .package-hexagon {
   display: block;
-  width: clamp(290px, 32vw, 390px);
-  filter: saturate(1) drop-shadow(0 10px 12px rgb(45 41 36 / 10%));
+  width: clamp(165px, 15vw, 180px);
+  filter: saturate(1) drop-shadow(0 6px 8px rgb(45 41 36 / 9%));
   transition: filter 200ms ease, transform 220ms ease;
 }
 

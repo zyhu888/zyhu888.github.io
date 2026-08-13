@@ -1,105 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 670" role="img" aria-labelledby="title description">
-  <title id="title">c4 package hex sticker</title>
-  <desc id="description">Covariate and network information combining into clustered communities.</desc>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="693" viewBox="0 0 600 693">
   <defs>
-    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#fffaf1"/>
-      <stop offset="1" stop-color="#efe4d4"/>
-    </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
-      <feDropShadow dx="0" dy="9" stdDeviation="10" flood-color="#2d2924" flood-opacity=".16"/>
-    </filter>
-    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9e4b35"/>
-    </marker>
+    <clipPath id="hexclip">
+      <polygon points="300,10.5 591,178.5 591,514.5 300,682.5 9,514.5 9,178.5"/>
+    </clipPath>
   </defs>
 
-  <g filter="url(#shadow)">
-    <path d="M300 23 555 170v295L300 612 45 465V170Z" fill="url(#paper)" stroke="#9e4b35" stroke-width="16" stroke-linejoin="round"/>
-    <path d="M300 43 538 181v273L300 591 62 454V181Z" fill="none" stroke="#2d2924" stroke-width="2.5" stroke-linejoin="round" opacity=".72"/>
-  </g>
+  <!-- hexagon body -->
+  <polygon points="300,10.5 591,178.5 591,514.5 300,682.5 9,514.5 9,178.5"
+           fill="#FAF2E6" stroke="#17706B" stroke-width="17" stroke-linejoin="round"/>
 
-  <text x="300" y="151" fill="#2d2924" font-family="Avenir Next, Avenir, Inter, Arial, sans-serif" font-size="108" font-weight="700" letter-spacing="-7" text-anchor="middle">c4</text>
-  <text x="300" y="190" fill="#9e4b35" font-family="Avenir Next, Avenir, Inter, Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="4.6" text-anchor="middle">COVARIATE · CONNECTIVITY</text>
+  <g clip-path="url(#hexclip)">
+    <!-- community halos -->
+    <circle cx="190" cy="357" r="88" fill="#17706B" opacity="0.09"/>
+    <circle cx="412" cy="358" r="88" fill="#E08A2E" opacity="0.11"/>
+    <circle cx="301" cy="529" r="78" fill="#8A5FA8" opacity="0.10"/>
 
-  <!-- Covariate information -->
-  <g transform="translate(112 232)">
-    <rect width="128" height="146" rx="18" fill="#fff" stroke="#2d2924" stroke-width="3"/>
-    <text x="64" y="27" fill="#2d2924" font-family="Avenir Next, Avenir, Inter, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1.8" text-anchor="middle">COVARIATES</text>
-    <line x1="18" y1="40" x2="110" y2="40" stroke="#cbbdaa" stroke-width="2"/>
-    <circle cx="31" cy="67" r="10" fill="#287aa1"/>
-    <circle cx="31" cy="98" r="10" fill="#d68435"/>
-    <circle cx="31" cy="129" r="10" fill="#6e8f65"/>
-    <rect x="52" y="58" width="56" height="9" rx="4.5" fill="#287aa1" opacity=".25"/>
-    <rect x="52" y="73" width="35" height="6" rx="3" fill="#2d2924" opacity=".22"/>
-    <rect x="52" y="89" width="43" height="9" rx="4.5" fill="#d68435" opacity=".28"/>
-    <rect x="52" y="104" width="56" height="6" rx="3" fill="#2d2924" opacity=".22"/>
-    <rect x="52" y="120" width="50" height="9" rx="4.5" fill="#6e8f65" opacity=".28"/>
-    <rect x="52" y="135" width="28" height="6" rx="3" fill="#2d2924" opacity=".22"/>
-  </g>
-
-  <!-- Plus sign -->
-  <g stroke="#9e4b35" stroke-width="7" stroke-linecap="round">
-    <line x1="278" y1="297" x2="322" y2="297"/>
-    <line x1="300" y1="275" x2="300" y2="319"/>
-  </g>
-
-  <!-- Network connectivity -->
-  <g transform="translate(367 238)">
-    <circle cx="59" cy="68" r="69" fill="#fff" stroke="#2d2924" stroke-width="3"/>
-    <g stroke="#74685c" stroke-width="3" opacity=".82">
-      <line x1="18" y1="37" x2="61" y2="21"/>
-      <line x1="61" y1="21" x2="101" y2="43"/>
-      <line x1="101" y1="43" x2="94" y2="91"/>
-      <line x1="94" y1="91" x2="51" y2="115"/>
-      <line x1="51" y1="115" x2="19" y2="82"/>
-      <line x1="19" y1="82" x2="18" y2="37"/>
-      <line x1="18" y1="37" x2="94" y2="91"/>
-      <line x1="61" y1="21" x2="51" y2="115"/>
-      <line x1="19" y1="82" x2="101" y2="43"/>
-      <line x1="18" y1="37" x2="51" y2="115" stroke-width="6" stroke="#287aa1"/>
-      <line x1="61" y1="21" x2="94" y2="91" stroke-width="6" stroke="#d68435"/>
+    <!-- between-community edges (weak) -->
+    <g stroke="#B9B4AC" stroke-linecap="round" fill="none">
+      <line x1="215" y1="300" x2="388" y2="300" stroke-width="2.2"/>
+      <line x1="205" y1="415" x2="255" y2="505" stroke-width="2.2"/>
+      <line x1="398" y1="418" x2="348" y2="505" stroke-width="2.2"/>
+      <line x1="450" y1="355" x2="388" y2="300" stroke-width="0"/>
     </g>
-    <circle cx="18" cy="37" r="10" fill="#287aa1" stroke="#fff" stroke-width="3"/>
-    <circle cx="61" cy="21" r="10" fill="#d68435" stroke="#fff" stroke-width="3"/>
-    <circle cx="101" cy="43" r="10" fill="#6e8f65" stroke="#fff" stroke-width="3"/>
-    <circle cx="94" cy="91" r="10" fill="#d68435" stroke="#fff" stroke-width="3"/>
-    <circle cx="51" cy="115" r="10" fill="#287aa1" stroke="#fff" stroke-width="3"/>
-    <circle cx="19" cy="82" r="10" fill="#6e8f65" stroke="#fff" stroke-width="3"/>
-  </g>
 
-  <!-- Combined clustering result -->
-  <path d="M300 343v45" fill="none" stroke="#9e4b35" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
-  <g transform="translate(151 408)">
-    <rect width="298" height="98" rx="49" fill="#2d2924"/>
-    <g transform="translate(35 19)">
-      <circle cx="30" cy="30" r="28" fill="#287aa1" opacity=".24"/>
-      <circle cx="18" cy="25" r="7" fill="#287aa1"/>
-      <circle cx="38" cy="16" r="7" fill="#287aa1"/>
-      <circle cx="42" cy="41" r="7" fill="#287aa1"/>
-      <line x1="18" y1="25" x2="38" y2="16" stroke="#f7efe3" stroke-width="2"/>
-      <line x1="18" y1="25" x2="42" y2="41" stroke="#f7efe3" stroke-width="2"/>
-      <line x1="38" y1="16" x2="42" y2="41" stroke="#f7efe3" stroke-width="2"/>
+    <!-- within-community edges (strong / weighted) -->
+    <g stroke="#3D3A36" stroke-linecap="round" fill="none">
+      <line x1="150" y1="355" x2="215" y2="300" stroke-width="5"/>
+      <line x1="215" y1="300" x2="205" y2="415" stroke-width="3.6"/>
+      <line x1="150" y1="355" x2="205" y2="415" stroke-width="4.4"/>
+
+      <line x1="450" y1="355" x2="388" y2="300" stroke-width="4.4"/>
+      <line x1="388" y1="300" x2="398" y2="418" stroke-width="3.6"/>
+      <line x1="450" y1="355" x2="398" y2="418" stroke-width="5"/>
+
+      <line x1="255" y1="505" x2="348" y2="505" stroke-width="4.4"/>
+      <line x1="348" y1="505" x2="300" y2="578" stroke-width="3.6"/>
+      <line x1="255" y1="505" x2="300" y2="578" stroke-width="5"/>
     </g>
-    <g transform="translate(121 19)">
-      <circle cx="30" cy="30" r="28" fill="#d68435" opacity=".26"/>
-      <circle cx="18" cy="25" r="7" fill="#d68435"/>
-      <circle cx="38" cy="16" r="7" fill="#d68435"/>
-      <circle cx="42" cy="41" r="7" fill="#d68435"/>
-      <line x1="18" y1="25" x2="38" y2="16" stroke="#f7efe3" stroke-width="2"/>
-      <line x1="18" y1="25" x2="42" y2="41" stroke="#f7efe3" stroke-width="2"/>
-      <line x1="38" y1="16" x2="42" y2="41" stroke="#f7efe3" stroke-width="2"/>
-    </g>
-    <g transform="translate(207 19)">
-      <circle cx="30" cy="30" r="28" fill="#6e8f65" opacity=".28"/>
-      <circle cx="18" cy="25" r="7" fill="#6e8f65"/>
-      <circle cx="38" cy="16" r="7" fill="#6e8f65"/>
-      <circle cx="42" cy="41" r="7" fill="#6e8f65"/>
-      <line x1="18" y1="25" x2="38" y2="16" stroke="#f7efe3" stroke-width="2"/>
-      <line x1="18" y1="25" x2="42" y2="41" stroke="#f7efe3" stroke-width="2"/>
-      <line x1="38" y1="16" x2="42" y2="41" stroke="#f7efe3" stroke-width="2"/>
+
+    <!-- nodes: core = community, ring = node covariate -->
+    <g stroke-width="8">
+      <circle cx="150" cy="355" r="18" fill="#17706B" stroke="#8FD0CA"/>
+      <circle cx="215" cy="300" r="18" fill="#17706B" stroke="#8FD0CA"/>
+      <circle cx="205" cy="415" r="18" fill="#17706B" stroke="#8FD0CA"/>
+
+      <circle cx="450" cy="355" r="18" fill="#E08A2E" stroke="#F7CE93"/>
+      <circle cx="388" cy="300" r="18" fill="#E08A2E" stroke="#F7CE93"/>
+      <circle cx="398" cy="418" r="18" fill="#E08A2E" stroke="#F7CE93"/>
+
+      <circle cx="255" cy="505" r="18" fill="#8A5FA8" stroke="#CDB3E0"/>
+      <circle cx="348" cy="505" r="18" fill="#8A5FA8" stroke="#CDB3E0"/>
+      <circle cx="300" cy="578" r="18" fill="#8A5FA8" stroke="#CDB3E0"/>
     </g>
   </g>
 
-  <text x="300" y="542" fill="#2d2924" font-family="Avenir Next, Avenir, Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="2.7" text-anchor="middle">COMBINED CLUSTERING</text>
+  <!-- package name -->
+  <text x="300" y="252" text-anchor="middle" font-family="Quicksand" font-weight="bold"
+        font-size="165" letter-spacing="3" fill="#17706B">c4</text>
 </svg>
