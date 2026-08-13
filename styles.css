@@ -1016,91 +1016,21 @@ a:focus-visible {
 }
 
 .package-hexagon {
-  position: relative;
-  display: flex;
-  width: clamp(210px, 24vw, 290px);
-  aspect-ratio: 1.06;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2.8rem 2.25rem 2.35rem;
-  background: var(--terracotta);
-  clip-path: polygon(25% 4%, 75% 4%, 98% 50%, 75% 96%, 25% 96%, 2% 50%);
-  color: var(--paper);
-  text-align: center;
-  transition:
-    background 200ms ease,
-    transform 220ms ease;
+  display: block;
+  width: clamp(245px, 27vw, 330px);
+  filter: saturate(0.96);
+  transition: filter 200ms ease, transform 220ms ease;
 }
 
-.package-hexagon::before {
-  position: absolute;
-  inset: 8px;
-  border: 1px solid rgb(242 236 226 / 55%);
-  clip-path: inherit;
-  content: "";
-  pointer-events: none;
+.package-hexagon img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .package-hexagon:hover {
-  background: var(--ink);
+  filter: saturate(1.08) drop-shadow(0 12px 13px rgb(45 41 36 / 12%));
   transform: translateY(-5px);
-}
-
-.package-hexagon-name {
-  position: relative;
-  z-index: 1;
-  font-family: var(--serif);
-  font-size: clamp(3rem, 6vw, 4.4rem);
-  font-weight: 600;
-  letter-spacing: -0.07em;
-  line-height: 0.9;
-}
-
-.package-network {
-  position: relative;
-  z-index: 1;
-  width: 94px;
-  height: 50px;
-  margin: 1rem 0 0.65rem;
-  background:
-    linear-gradient(25deg, transparent 48%, currentColor 49%, currentColor 51%, transparent 52%) 7px 8px / 45px 30px no-repeat,
-    linear-gradient(-27deg, transparent 48%, currentColor 49%, currentColor 51%, transparent 52%) 42px 8px / 45px 30px no-repeat,
-    linear-gradient(90deg, transparent 48%, currentColor 49%, currentColor 51%, transparent 52%) 19px 15px / 55px 22px no-repeat;
-  opacity: 0.9;
-}
-
-.package-network i {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border: 2px solid var(--paper);
-  border-radius: 50%;
-  background: var(--terracotta);
-}
-
-.package-hexagon:hover .package-network i {
-  background: var(--ink);
-}
-
-.package-network i:nth-child(1) { top: 4px; left: 42px; }
-.package-network i:nth-child(2) { top: 30px; left: 4px; }
-.package-network i:nth-child(3) { top: 30px; right: 4px; }
-.package-network i:nth-child(4) { top: 38px; left: 31px; }
-.package-network i:nth-child(5) { top: 38px; right: 31px; }
-
-.package-hexagon-caption {
-  position: relative;
-  z-index: 1;
-  font-size: 0.65rem;
-  font-weight: 650;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.package-hexagon-caption b {
-  padding-inline: 0.2rem;
-  font-weight: 400;
 }
 
 .software-catalog {
