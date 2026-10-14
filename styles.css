@@ -976,27 +976,31 @@ a:focus-visible {
 }
 
 .publication-resources a {
-  padding: 0.18rem 0.46rem;
-  border: 1px solid color-mix(in srgb, var(--link-blue) 38%, transparent);
-  border-radius: 999px;
   color: var(--link-blue);
   font-family: var(--sans);
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
   line-height: 1;
   text-decoration: none;
   text-transform: uppercase;
   transition:
-    border-color 180ms ease,
     color 180ms ease,
-    background-color 180ms ease;
+    text-decoration-color 180ms ease;
+}
+
+.publication-resources a::before {
+  content: "[";
+}
+
+.publication-resources a::after {
+  content: "]";
 }
 
 .publication-resources a:hover {
-  border-color: var(--link-blue-dark);
-  background: color-mix(in srgb, var(--link-blue) 8%, transparent);
   color: var(--link-blue-dark);
+  text-decoration-line: underline;
+  text-underline-offset: 0.14em;
 }
 
 .software-page {
