@@ -19,11 +19,7 @@ I am a Ph.D. candidate in Statistics at the University of Connecticut. My resear
 - `pages/` — Source HTML pages for the website
 - `assets/` — Styles, scripts, images, logos, and the current resume source file
 - `papers/` — Publication PDFs
-- `.github/workflows/deploy-pages.yml` — Publishes the organized source files while preserving the existing public URLs
 
-The public resume URL is permanently kept at
-**[https://zyhu888.github.io/Zeyu_Hu_Resume.pdf](https://zyhu888.github.io/Zeyu_Hu_Resume.pdf)**.
-Future resume updates should replace `assets/documents/Zeyu_Hu_Resume.pdf` without changing the filename.
 
 ## Contact
 
