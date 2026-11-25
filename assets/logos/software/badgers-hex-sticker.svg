@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="693" viewBox="0 0 600 693">
+  <defs><clipPath id="hexclip">
+    <polygon points="300,10.5 591,178.5 591,514.5 300,682.5 9,514.5 9,178.5"/>
+  </clipPath></defs>
+
+  <!-- hexagon body -->
+  <polygon points="300,10.5 591,178.5 591,514.5 300,682.5 9,514.5 9,178.5" fill="#FAF2E6" stroke="#17706B" stroke-width="17" stroke-linejoin="round"/>
+
+  <g clip-path="url(#hexclip)">
+
+  <!-- row 1 left: replicate measurements of the covariates; the last layer has missing (NA) replicates -->
+  <g>
+    <polygon points="168,208 273,238 168,268 63,238" fill="#F3EAD8" stroke="#DCCFB8" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="93.4" cy="232" r="5.5" fill="#B09669"/>
+    <circle cx="130.5" cy="243" r="5.5" fill="#B09669"/>
+    <circle cx="168" cy="234" r="5.5" fill="#B09669"/>
+    <circle cx="205.5" cy="244" r="5.5" fill="#B09669"/>
+    <circle cx="242.6" cy="233" r="5.5" fill="#B09669"/>
+    <polygon points="168,254 273,284 168,314 63,284" fill="#F3EAD8" stroke="#DCCFB8" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="93.4" cy="289" r="5.5" fill="#B09669"/>
+    <circle cx="130.5" cy="278" r="5.5" fill="#B09669"/>
+    <circle cx="168" cy="290" r="5.5" fill="#B09669"/>
+    <circle cx="205.5" cy="280" r="5.5" fill="#B09669"/>
+    <circle cx="242.6" cy="289" r="5.5" fill="#B09669"/>
+    <polygon points="168,300 273,330 168,360 63,330" fill="#F3EAD8" stroke="#DCCFB8" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="93.4" cy="326" r="5.5" fill="#B09669"/>
+    <circle cx="130.5" cy="336" r="5.5" fill="#B09669"/>
+    <circle cx="168" cy="324" r="5.5" fill="#B09669"/>
+    <circle cx="205.5" cy="330" r="5.5" fill="none" stroke="#B9B4AC" stroke-width="1.8" stroke-dasharray="2.6 2.6"/>
+    <circle cx="242.6" cy="330" r="5.5" fill="none" stroke="#B9B4AC" stroke-width="1.8" stroke-dasharray="2.6 2.6"/>
+  </g>
+
+  <!-- row 1 right: the working graph on the predictors -->
+  <g>
+    <polygon points="432,249 545,286 432,323 319,286" fill="#F3EAD8" stroke="#C9BB9E" stroke-width="2" stroke-linejoin="round"/>
+    <g stroke="#B9B4AC" stroke-width="2.4" stroke-linecap="round" fill="none">
+      <line x1="410" y1="268" x2="454" y2="268"/>
+      <line x1="410" y1="304" x2="454" y2="304"/>
+    </g>
+    <g stroke="#3D3A36" stroke-linecap="round" fill="none">
+      <line x1="380" y1="286" x2="410" y2="268" stroke-width="3.6"/>
+      <line x1="380" y1="286" x2="410" y2="304" stroke-width="3.6"/>
+      <line x1="410" y1="268" x2="410" y2="304" stroke-width="3.6"/>
+      <line x1="454" y1="268" x2="454" y2="304" stroke-width="3.6"/>
+      <line x1="454" y1="268" x2="484" y2="286" stroke-width="3.6"/>
+      <line x1="454" y1="304" x2="484" y2="286" stroke-width="3.6"/>
+    </g>
+    <g stroke-width="4">
+      <circle cx="380" cy="286" r="9" fill="#17706B" stroke="#8FD0CA"/>
+      <circle cx="410" cy="268" r="9" fill="#17706B" stroke="#8FD0CA"/>
+      <circle cx="410" cy="304" r="9" fill="#17706B" stroke="#8FD0CA"/>
+      <circle cx="454" cy="268" r="9" fill="#E08A2E" stroke="#F7CE93"/>
+      <circle cx="454" cy="304" r="9" fill="#E08A2E" stroke="#F7CE93"/>
+      <circle cx="484" cy="286" r="9" fill="#E08A2E" stroke="#F7CE93"/>
+    </g>
+  </g>
+
+  <!-- both inputs converge on one regression -->
+  <g fill="none" stroke="#17706B" stroke-width="5.5" stroke-linecap="round">
+    <path d="M168,360 C168,424 300,414 300,452"/>
+    <path d="M432,323 C432,406 300,408 300,452"/>
+  </g>
+  <path d="M284,452 L316,452 L300,482 Z" fill="#17706B" stroke="#17706B" stroke-width="4" stroke-linejoin="round"/>
+
+  <!-- row 2: sparse regression coefficients -->
+  <polygon points="300,496 450,548 300,600 150,548" fill="#F8F0E1" stroke="#17706B" stroke-width="2.5" stroke-linejoin="round"/>
+  <line x1="176" y1="548" x2="424" y2="548" stroke="#B9B4AC" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="186.0" cy="548" r="3.6" fill="#A39C92"/>
+  <circle cx="214.5" cy="548" r="3.6" fill="#A39C92"/>
+  <line x1="243.0" y1="548" x2="243.0" y2="524" stroke="#17706B" stroke-width="4.6" stroke-linecap="round"/>
+  <circle cx="243.0" cy="524" r="10" fill="#17706B" stroke="#8FD0CA" stroke-width="5"/>
+  <circle cx="271.5" cy="548" r="3.6" fill="#A39C92"/>
+  <line x1="300.0" y1="548" x2="300.0" y2="580" stroke="#E08A2E" stroke-width="4.6" stroke-linecap="round"/>
+  <circle cx="300.0" cy="580" r="10" fill="#E08A2E" stroke="#F7CE93" stroke-width="5"/>
+  <circle cx="328.5" cy="548" r="3.6" fill="#A39C92"/>
+  <line x1="357.0" y1="548" x2="357.0" y2="520" stroke="#17706B" stroke-width="4.6" stroke-linecap="round"/>
+  <circle cx="357.0" cy="520" r="10" fill="#17706B" stroke="#8FD0CA" stroke-width="5"/>
+  <circle cx="385.5" cy="548" r="3.6" fill="#A39C92"/>
+  <circle cx="414.0" cy="548" r="3.6" fill="#A39C92"/>
+  </g>
+
+  <!-- captions -->
+  <g font-family="Quicksand, 'Trebuchet MS', 'Avenir Next', 'Nunito', sans-serif" font-weight="bold" font-size="21" fill="#6F685F" text-anchor="middle">
+    <text x="100" y="398">covariates</text>
+    <text x="500" y="368">network</text>
+    <text x="300" y="628">coefficients</text>
+  </g>
+
+  <!-- package name -->
+  <text x="300" y="162" text-anchor="middle"
+        font-family="Quicksand, 'Trebuchet MS', 'Avenir Next', 'Nunito', sans-serif"
+        font-weight="bold" font-size="74" letter-spacing="2" fill="#17706B">badgers</text>
+</svg>

@@ -55,7 +55,15 @@
     </g>
   </g>
 
+  <!-- captions -->
+  <g font-family="Quicksand, 'Trebuchet MS', 'Avenir Next', 'Nunito', sans-serif" font-weight="bold" font-size="21" fill="#6F685F" text-anchor="middle">
+    <text x="165" y="482">network</text>
+    <text x="437" y="482">covariates</text>
+    <text x="300" y="634">communities</text>
+  </g>
+
   <!-- package name -->
-  <text x="300" y="252" text-anchor="middle" font-family="Quicksand" font-weight="bold"
-        font-size="165" letter-spacing="3" fill="#17706B">c4</text>
+  <text x="300" y="205" text-anchor="middle"
+        font-family="Quicksand, 'Trebuchet MS', 'Avenir Next', 'Nunito', sans-serif"
+        font-weight="bold" font-size="102" letter-spacing="2" fill="#17706B">c4</text>
 </svg>
