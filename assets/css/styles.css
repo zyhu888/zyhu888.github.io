@@ -134,8 +134,14 @@ a:focus-visible {
   grid-template-columns: minmax(0, 1.42fr) minmax(250px, 0.58fr);
   gap: clamp(3.5rem, 9vw, 9rem);
   align-items: start;
-  min-height: calc(100vh - 78px);
-  padding-block: clamp(3.25rem, 6vw, 5.5rem);
+  padding-block: clamp(3.25rem, 6vw, 5.5rem) clamp(2rem, 4vw, 3.75rem);
+}
+
+.home-sections > .page-shell {
+  min-height: 0;
+  padding-block: clamp(2rem, 4vw, 3.75rem);
+  border-top: 1px solid var(--rule);
+  scroll-margin-top: 7rem;
 }
 
 .introduction {
@@ -635,7 +641,7 @@ a:focus-visible {
   text-transform: uppercase;
 }
 
-.experience-intro h1 {
+.experience-intro > :is(h1, h2) {
   margin: 0;
   color: var(--terracotta);
   font-family: var(--serif);
@@ -674,7 +680,7 @@ a:focus-visible {
   width: 100%;
 }
 
-.experience-panel-copy h2 {
+.experience-panel-copy > :is(h2, h3) {
   max-width: 760px;
   margin: 0;
   font-family: var(--serif);
@@ -708,7 +714,7 @@ a:focus-visible {
   align-items: flex-start;
 }
 
-.experience-entry-heading h3 {
+.experience-entry-heading :is(h3, h4) {
   margin: 0;
   font-family: var(--serif);
   font-size: clamp(1.35rem, 2.2vw, 1.75rem);
@@ -838,7 +844,7 @@ a:focus-visible {
   text-transform: uppercase;
 }
 
-.publications-intro h1 {
+.publications-intro > :is(h1, h2) {
   margin: 0;
   color: var(--terracotta);
   font-family: var(--serif);
@@ -894,7 +900,7 @@ a:focus-visible {
   margin-bottom: 1rem;
 }
 
-.publication-section-heading h2 {
+.publication-section-heading > :is(h2, h3) {
   margin: 0;
   font-family: var(--serif);
   font-size: clamp(1.5rem, 2.4vw, 2rem);
@@ -1019,7 +1025,7 @@ a:focus-visible {
   text-transform: uppercase;
 }
 
-.software-intro h1 {
+.software-intro > :is(h1, h2) {
   margin: 0;
   color: var(--terracotta);
   font-family: var(--serif);
@@ -1060,24 +1066,24 @@ a:focus-visible {
   letter-spacing: 0.04em;
 }
 
-.software-row h2,
+.software-row > :is(h2, h3),
 .software-row p {
   margin: 0;
 }
 
-.software-row h2 {
+.software-row > :is(h2, h3) {
   font-size: 1rem;
   font-weight: 650;
 }
 
-.software-row h2 a {
+.software-row > :is(h2, h3) a {
   color: var(--link-blue);
   text-decoration: underline;
   text-decoration-color: color-mix(in srgb, var(--link-blue) 45%, transparent);
   text-underline-offset: 0.17em;
 }
 
-.software-row h2 a:hover {
+.software-row > :is(h2, h3) a:hover {
   color: var(--link-blue-dark);
   text-decoration-color: currentColor;
 }
@@ -1111,7 +1117,7 @@ a:focus-visible {
   text-transform: uppercase;
 }
 
-.about-intro h1 {
+.about-intro > :is(h1, h2) {
   margin: 0;
   color: var(--terracotta);
   font-family: var(--serif);
@@ -1143,7 +1149,7 @@ a:focus-visible {
   border-bottom: 0;
 }
 
-.about-section h2 {
+.about-section > :is(h2, h3) {
   margin: 0 0 1.15rem;
   font-family: var(--sans);
   font-size: clamp(1.35rem, 2.2vw, 1.75rem);
@@ -1260,7 +1266,6 @@ a:focus-visible {
     display: flex;
     flex-direction: column;
     gap: 2.25rem;
-    min-height: auto;
     padding-block: 2.75rem;
   }
 
@@ -1290,10 +1295,10 @@ a:focus-visible {
     display: block;
   }
 
-  .publications-intro h1,
-  .software-intro h1,
-  .about-intro h1,
-  .experience-intro h1 {
+  .publications-intro > :is(h1, h2),
+  .software-intro > :is(h1, h2),
+  .about-intro > :is(h1, h2),
+  .experience-intro > :is(h1, h2) {
     margin-bottom: 1rem;
   }
 
