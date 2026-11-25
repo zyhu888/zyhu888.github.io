@@ -1035,35 +1035,7 @@ a:focus-visible {
   line-height: 1.65;
 }
 
-.software-showcase {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(165px, 180px));
-  gap: clamp(2rem, 6vw, 5rem);
-  justify-content: center;
-  place-items: center;
-  padding-block: clamp(1.8rem, 3vw, 2.5rem);
-}
-
-.package-hexagon {
-  display: block;
-  width: clamp(165px, 15vw, 180px);
-  filter: saturate(1) drop-shadow(0 6px 8px rgb(45 41 36 / 9%));
-  transition: filter 200ms ease, transform 220ms ease;
-}
-
-.package-hexagon img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.package-hexagon:hover {
-  filter: saturate(1.08) drop-shadow(0 12px 13px rgb(45 41 36 / 12%));
-  transform: translateY(-5px);
-}
-
 .software-catalog {
-  border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
 }
 
