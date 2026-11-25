@@ -1,4 +1,5 @@
 :root {
+  --page-background: #ffffff;
   --paper: #f2ece2;
   --paper-deep: #e7dccd;
   --ink: #302720;
@@ -23,7 +24,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--paper);
+  background: var(--page-background);
   color: var(--ink);
   font-family: var(--sans);
   font-size: 16px;
@@ -61,7 +62,7 @@ a:focus-visible {
   min-height: 78px;
   padding: 0 4vw;
   border-bottom: 1px solid color-mix(in srgb, var(--rule) 75%, transparent);
-  background: color-mix(in srgb, var(--paper) 94%, transparent);
+  background: color-mix(in srgb, var(--page-background) 94%, transparent);
   backdrop-filter: blur(14px);
 }
 
